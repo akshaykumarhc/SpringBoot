@@ -11,7 +11,8 @@ public class TopicService {
             new Topic("001", "Java", "This course will give you basic !dea of Java."),
             new Topic("002", "Spring", "This course will give you basic !dea of Spring."),
             new Topic("003", "SQL", "This course will give you basic !dea of SQL."),
-            new Topic("004", "Micro service", "This course will give you basic !dea of Micro service.")
+            new Topic("004", "Micro service", "This course will give you basic !dea of Micro service."),
+            new Topic("005", "Python", "This course will give you basic !dea of Python.")
     );
 
     public List<Topic> getTopics() {
