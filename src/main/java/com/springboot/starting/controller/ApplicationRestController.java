@@ -29,7 +29,7 @@ public class ApplicationRestController {
     }
     @RequestMapping(method = RequestMethod.PUT,value = "/topics/{id}")
     public Topic updateTopic(@PathVariable String id , @RequestBody Topic topic){
-        topicService.updateTopic(id,topic);
+        topicService.updateTopic(topic);
         return topicService.getTopic(topic.getId());
     }
     @RequestMapping(method = RequestMethod.DELETE,value = "/topics/{id}")
