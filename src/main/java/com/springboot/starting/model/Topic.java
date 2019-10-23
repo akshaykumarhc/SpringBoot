@@ -1,6 +1,11 @@
 package com.springboot.starting.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Topic {
+    @Id
     private String id;
     private String name;
     private String Description;
@@ -38,3 +43,4 @@ public class Topic {
         this.id = id;
     }
 }
+

@@ -1,3 +1,7 @@
+com/springboot/starting/repository/TopicRepository.class
 com/springboot/starting/SpringBootStartPointApp.class
 com/springboot/starting/controller/ApplicationRestController.class
 com/springboot/starting/model/Course.class
+com/springboot/starting/model/Lesson.class
+com/springboot/starting/model/Topic.class
+com/springboot/starting/model/TopicService.class

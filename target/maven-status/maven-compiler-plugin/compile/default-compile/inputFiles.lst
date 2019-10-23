@@ -1,3 +1,7 @@
+/Users/akshaykumar/SpringBootDemo/src/main/java/com/springboot/starting/repository/TopicRepository.java
 /Users/akshaykumar/SpringBootDemo/src/main/java/com/springboot/starting/SpringBootStartPointApp.java
 /Users/akshaykumar/SpringBootDemo/src/main/java/com/springboot/starting/model/Course.java
+/Users/akshaykumar/SpringBootDemo/src/main/java/com/springboot/starting/model/Topic.java
 /Users/akshaykumar/SpringBootDemo/src/main/java/com/springboot/starting/controller/ApplicationRestController.java
+/Users/akshaykumar/SpringBootDemo/src/main/java/com/springboot/starting/model/Lesson.java
+/Users/akshaykumar/SpringBootDemo/src/main/java/com/springboot/starting/model/TopicService.java
