@@ -8,31 +8,32 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("/api")
 public class TopicController {
 
     @Autowired
     private TopicService topicService;
 
-    @RequestMapping("/topics")
+    @GetMapping("/topics")
     public List<Topic> getTopics(){
         return topicService.getTopics();
     }
-    @RequestMapping("/topics/{id}")
+    @GetMapping("/topics/{id}")
     public Topic getTopic(@PathVariable String id){
         return topicService.getTopic(id);
     }
 
-    @RequestMapping(method = RequestMethod.POST,value = "/topics")
+    @PostMapping(value = "/topics")
     public Topic addTopic(@RequestBody Topic topic){
         topicService.addTopic(topic);
         return topicService.getTopic(topic.getId());
     }
-    @RequestMapping(method = RequestMethod.PUT,value = "/topics/{id}")
+    @PutMapping(value = "/topics/{id}")
     public Topic updateTopic(@PathVariable String id , @RequestBody Topic topic){
         topicService.updateTopic(topic);
         return topicService.getTopic(topic.getId());
     }
-    @RequestMapping(method = RequestMethod.DELETE,value = "/topics/{id}")
+    @DeleteMapping(value = "/topics/{id}")
     public void deleteTopic(@PathVariable String id){
         topicService.deleteTopic(id);
     }

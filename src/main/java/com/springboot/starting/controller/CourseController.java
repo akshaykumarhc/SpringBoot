@@ -9,33 +9,34 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("/api")
 public class CourseController {
 
     @Autowired
     private CourseService courseService;
 
-    @RequestMapping("/topics/{topicId}/courses")
+    @GetMapping("/topics/{topicId}/courses")
     public List<Course> getCourses(@PathVariable String topicId){
         return courseService.getCourses(topicId);
     }
-    @RequestMapping("/topics/{topicid}/courses/{id}")
+    @GetMapping("/topics/{topicid}/courses/{id}")
     public Course getCourse(@PathVariable String id){
         return courseService.getCourse(id);
     }
 
-    @RequestMapping(method = RequestMethod.POST,value = "/topics/{topicId}/courses")
+    @PostMapping(value = "/topics/{topicId}/courses")
     public Course addCourse(@RequestBody Course course,@PathVariable String topicId){
         course.setTopic(new Topic(topicId,"",""));
         courseService.addCourse(course);
         return courseService.getCourse(course.getId());
     }
-    @RequestMapping(method = RequestMethod.PUT,value = "/topics/{topicId}/courses/{id}")
+    @PutMapping(value = "/topics/{topicId}/courses/{id}")
     public Course updateCourse(@PathVariable String id , @RequestBody Course course,@PathVariable String topicId){
         course.setTopic(new Topic(topicId,"",""));
         courseService.updateCourse(course);
         return courseService.getCourse(course.getId());
     }
-    @RequestMapping(method = RequestMethod.DELETE,value = "/topics/{topicId}/courses/{id}")
+    @DeleteMapping(value = "/topics/{topicId}/courses/{id}")
     public void deleteCourse(@PathVariable String id){
         courseService.deleteCourse(id);
     }
