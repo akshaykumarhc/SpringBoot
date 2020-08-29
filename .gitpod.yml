@@ -3,7 +3,13 @@ image:
 
 tasks:
   - init: mvn clean install -Pjar -DskipTests
-    command: cp zeebe-sink.properties ~/confluent-5.5.0/etc/kafka-connect-zeebe-sink && /home/gitpod/confluent-5.5.0/bin/confluent-hub install --no-prompt confluentinc/kafka-connect-datagen:latest && /home/gitpod/confluent-5.5.0/bin/confluent local start
+    command:  mkdir ~/confluent-5.5.0/etc/kafka-connect-zeebe-sink && \
+      mkdir /home/gitpod/confluent-5.5.0/share/java/kafka-connect-zeebe && \
+      cp /home/gitpod/zeebe-io-kafka-connect-zeebe-0.22.0/etc/quickstart-zeebe* ~/confluent-5.5.0/etc/kafka-connect-zeebe-sink && \
+      cp -R /home/gitpod/zeebe-io-kafka-connect-zeebe-0.22.0/lib/* /home/gitpod/confluent-5.5.0/share/java/kafka-connect-zeebe
+      /home/gitpod/confluent-5.5.0/bin/confluent-hub install --no-prompt confluentinc/kafka-connect-datagen:latest && \
+      /home/gitpod/confluent-5.5.0/bin/confluent local start
+    
 
 ports:
   - port: 8083
