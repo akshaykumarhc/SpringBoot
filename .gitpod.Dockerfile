@@ -7,7 +7,7 @@ FROM gitpod/workspace-full
 # More information: https://www.gitpod.io/docs/config-docker/
 
 RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh \
-             && sdk install java 12.0.1.j9-adpt"
+             && sdk install java"
 
 RUN curl -O https://packages.confluent.io/archive/5.5/confluent-5.5.0-2.12.zip 
 
@@ -15,9 +15,9 @@ RUN unzip confluent-5.5.0-2.12.zip
 
 RUN export CONFLUENT_HOME=/home/gitpod/confluent-5.5.0 \
     && export PATH=$PATH:$CONFLUENT_HOME/bin
-#RUN /home/gitpod/confluent-5.5.0/bin/confluent-hub install --no-prompt confluentinc/kafka-connect-datagen:latest
-#RUN Running in a "--no-prompt" mode
+RUN /home/gitpod/confluent-5.5.0/bin/confluent-hub install --no-prompt confluentinc/kafka-connect-datagen:latest
+RUN Running in a "--no-prompt" mode
 
-#RUN confluent local start
+RUN confluent local start
 
 
