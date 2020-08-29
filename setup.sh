@@ -1,5 +1,5 @@
 
-cd ~/
-wget -qO - https://packages.confluent.io/archive/5.5/confluent-5.5.0-2.12.zip 
+/home/gitpod/confluent-5.5.0/bin/confluent-hub install --no-prompt confluentinc/kafka-connect-datagen:latest
+Running in a "--no-prompt" mode
 
-unzip -o confluent-5.5.0-2.12.zip
+confluent local start
