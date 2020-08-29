@@ -2,15 +2,9 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - init: mvn clean install -Pjar -DskipTests && \
-      rm -rf ~/confluent-5.5.0/etc/kafka-connect-zeebe && \
-      rm -rf /home/gitpod/confluent-5.5.0/share/java/kafka-connect-zeebe
-    command:  mkdir ~/confluent-5.5.0/etc/kafka-connect-zeebe && \
-      mkdir /home/gitpod/confluent-5.5.0/share/java/kafka-connect-zeebe && \
-      cp /home/gitpod/zeebe-io-kafka-connect-zeebe-0.22.0/etc/quickstart-zeebe* ~/confluent-5.5.0/etc/kafka-connect-zeebe && \
-      cp -R /home/gitpod/zeebe-io-kafka-connect-zeebe-0.22.0/lib/* /home/gitpod/confluent-5.5.0/share/java/kafka-connect-zeebe
-      /home/gitpod/confluent-5.5.0/bin/confluent-hub install --no-prompt confluentinc/kafka-connect-datagen:latest && \
-      /home/gitpod/confluent-5.5.0/bin/confluent local start
+  - init: mvn clean install -Pjar -DskipTests 
+    command: ~/confluent-5.5.0/bin/confluent-hub install --no-prompt confluentinc/kafka-connect-datagen:latest && \
+      ~/confluent-5.5.0/bin/confluent local start
     
 ports:
   - port: 8083
