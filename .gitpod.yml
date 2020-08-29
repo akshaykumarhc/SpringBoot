@@ -2,8 +2,7 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - before: ./setup.sh
-    init: mvn install -DskipTests=false
+  - init: mvn install -DskipTests=false
 
 ports:
-- port: 8083
+  - port: 8083
