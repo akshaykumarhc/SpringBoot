@@ -12,7 +12,8 @@ RUN unzip confluent-5.5.0-2.12.zip
 
 RUN export CONFLUENT_HOME=/home/gitpod/confluent-5.5.0 \
     && export PATH=$PATH:$CONFLUENT_HOME/bin
-RUN $CONFLUENT_HOME/bin/confluent-hub install --no-prompt confluentinc/kafka-connect-datagen:latest
+RUN cd /home/gitpod/confluent-5.5.0
+RUN bin/confluent-hub install --no-prompt confluentinc/kafka-connect-datagen:latest
 RUN Running in a "--no-prompt" mode
 
 RUN confluent local start
