@@ -13,9 +13,9 @@ RUN curl -O https://packages.confluent.io/archive/5.5/confluent-5.5.0-2.12.zip
 
 RUN unzip confluent-5.5.0-2.12.zip
 
-RUN export CONFLUENT_HOME=/home/gitpod/confluent-5.5.0 \
-    && export PATH=$PATH:$CONFLUENT_HOME/bin
-RUN /home/gitpod/confluent-5.5.0/bin/confluent-hub install --no-prompt confluentinc/kafka-connect-datagen:latest
+RUN bash -c "export CONFLUENT_HOME=/home/gitpod/confluent-5.5.0 \
+    && export PATH=$PATH:$CONFLUENT_HOME/bin"
+RUN bash -c ". /home/gitpod/confluent-5.5.0/bin/confluent-hub install --no-prompt confluentinc/kafka-connect-datagen:latest"
 RUN Running in a "--no-prompt" mode
 
 RUN confluent local start
