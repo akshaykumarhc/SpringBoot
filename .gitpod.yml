@@ -3,7 +3,7 @@ image:
 
 tasks:
   - init: mvn clean install -Pjar -DskipTests 
-    command: ~/confluent-5.5.0/bin/confluent-hub install --no-prompt confluentinc/kafka-connect-datagen:latest && \
+    command: /home/gitpod/confluent-5.5.0/bin/confluent-hub install --no-prompt confluentinc/kafka-connect-datagen:latest && \
       /home/gitpod/confluent-5.5.0/bin/confluent local start
     
 ports:

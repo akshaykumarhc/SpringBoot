@@ -28,3 +28,7 @@ RUN mkdir ~/confluent-5.5.0/etc/kafka-connect-zeebe && \
 RUN cp ~/zeebe-io-kafka-connect-zeebe-0.22.0/etc/quickstart-zeebe* ~/confluent-5.5.0/etc/kafka-connect-zeebe
 
 RUN cp -R ~/zeebe-io-kafka-connect-zeebe-0.22.0/lib/* ~/confluent-5.5.0/share/java/kafka-connect-zeebe
+
+USER root
+
+RUN apt install mongodb
