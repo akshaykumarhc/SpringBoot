@@ -31,4 +31,4 @@ RUN cp -R ~/zeebe-io-kafka-connect-zeebe-0.22.0/lib/* ~/confluent-5.5.0/share/ja
 
 USER root
 
-#RUN sudo apt-get install mongodb
+RUN sudo apt-get install -y mongodb
