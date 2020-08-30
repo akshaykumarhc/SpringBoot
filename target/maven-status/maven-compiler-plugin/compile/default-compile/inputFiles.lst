@@ -2,8 +2,8 @@
 /workspace/SpringBootDemo/src/main/java/com/springboot/starting/model/Topic.java
 /workspace/SpringBootDemo/src/main/java/com/springboot/starting/repository/TopicRepository.java
 /workspace/SpringBootDemo/src/main/java/com/springboot/starting/model/Course.java
-/workspace/SpringBootDemo/src/main/java/com/springboot/starting/controller/TopicController.java
 /workspace/SpringBootDemo/src/main/java/com/springboot/starting/SpringBootStartPointApp.java
+/workspace/SpringBootDemo/src/main/java/com/springboot/starting/controller/TopicController.java
 /workspace/SpringBootDemo/src/main/java/com/springboot/starting/model/TopicService.java
 /workspace/SpringBootDemo/src/main/java/com/springboot/starting/controller/CourseController.java
 /workspace/SpringBootDemo/src/main/java/com/springboot/starting/repository/CourseRepository.java
