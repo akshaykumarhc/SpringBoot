@@ -3,7 +3,7 @@ image:
 
 tasks:
   - init: mvn clean install -Pjar -DskipTests 
-    command: /home/gitpod/confluent-5.5.0/bin/confluent-hub install --no-prompt confluentinc/kafka-connect-datagen:latest && /home/gitpod/confluent-5.5.0/bin/confluent local start && service mongodb start
+    command: /home/gitpod/confluent-5.5.0/bin/confluent-hub install --no-prompt confluentinc/kafka-connect-datagen:latest && /home/gitpod/confluent-5.5.0/bin/confluent local start && service mongodb start && mkdir -p /workspace/data && mongod --dbpath /workspace/data
     
 ports:
   - port: 8083
